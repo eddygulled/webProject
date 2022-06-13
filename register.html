@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+     
+        <meta name="description" content="Our school">
+        <meta name="author" content="GUlay, Edgar Edward">
+
+        <title>St. Mary's</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="css/fontawesome-all.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <link rel="icon" href="images/logo.jpg">
+    </head>
+    <body>
+    
+        <div class="navbar">
+            <div class="container flex">
+
+                <nav>
+                    <ul >
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="staff.html">staff</a></li>
+                        <li><a href="login.php">login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <header>
+            <div class="container">
+                <div class="text-container">
+                    <h1 class="h1-large">St. Mary's <br> Secondary School</h1>
+                    
+                </div>
+            </div>
+        </header>
+
+        
+        
+        <div class="block3">
+            <div class="container grid">
+                <div class="text-container">
+                    <h2>Register</h2>
+                    <p class="p-large">The account that you are going to create will be used to access different parts of this website i.e, Alumni and Staff details</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/img_1.jpg" alt="alternative" class="rounded">
+                </div>
+            </div>
+        </div>
+
+
+         <!-- block5 -->
+         <div id="block5" class="block5 bg-gray">
+            <div class="container">
+                <h2>Registration Form</h2>
+                <p class="p-heading">Please provide all required Information to successfully create your account </p>
+
+                <!-- block5 Form -->
+                <form id = "form" action="register.php" method="post">
+                    <div class="form-group text-center">
+                        <span class="text-danger" id="err"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" placeholder="First Name" id = "fname" name = "fname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" placeholder="Middle Name" id = "mname" name = "mname">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" placeholder="Last Name" id = "lname" name = "lname">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control-input" placeholder="Email" id = "email"name = "email" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" placeholder="User Name" id = "uname" name = "uname">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control-input" placeholder="Birthday" id = "bdate" name = "bdate">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-input" placeholder="CV" id = "cv" name = "cv">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control-input" placeholder="password" id = "pwrd" name = "pWord">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control-input" placeholder="Confirm Password" id = "cpwrd" >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" id = "form_sub" class="form-control-submit-button" value="Register">
+                    </div>
+                </form>
+                <!-- end of block5 form -->
+
+            </div> <!-- end of container -->
+        </div> <!-- end of block5 -->
+        <!
+
+       
+        <!-- Footer -->
+        <footer>
+            <div class="container grid grid-3">
+                <div>
+                    <a class="logo-image" href="index.html"><img src="images/logo.jpg" alt="alternative" class="rounded"></a> 
+                </div>
+                <div>
+                    <ul class="li-space-lg">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="alumini.html">Alumini</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="https://web.facebook.com/StMarys-Secondary-School-Mbezi-BEACH-112852430561223/"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div> 
+        </footer>
+
+
+        
+        <a id="myBtn" href="#" data-scroll>
+            <img src="images/up-arrow.png" alt="alternative">
+        </a>
+        <!-- end of back to top button -->
+            
+        <!-- Scripts -->
+        <script src="js/smooth-scroll.polyfills.min.js"></script> <!-- Smooth Scroll -->
+        <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    </body>
+</html>

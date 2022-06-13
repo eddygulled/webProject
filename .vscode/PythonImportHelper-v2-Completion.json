@@ -1,0 +1,38 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "dataFile",
+        "kind": 5,
+        "importPath": "js.process",
+        "description": "js.process",
+        "peekOfCode": "dataFile = pl.Path(\".\")\npl.Path.joinpath(\"bad-words.csv\")\nfile = pd.read_csv(dataFile)\nprint(file.to_string())",
+        "detail": "js.process",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "js.process",
+        "description": "js.process",
+        "peekOfCode": "file = pd.read_csv(dataFile)\nprint(file.to_string())",
+        "detail": "js.process",
+        "documentation": {}
+    }
+]
