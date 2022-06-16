@@ -217,7 +217,7 @@ a:hover {
 }
 
 .form-control-input,
-.form-control-textarea {
+.form-control-textarea, select {
 	width: 100%;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
@@ -718,4 +718,28 @@ footer .fab {
 }
 #map{
 	width: 100%;
+}
+tr{
+	width: 100%;
+}
+.profile{
+	padding: 10px;
+	margin: 5px;
+	color: 323137;
+	font-weight: bold;
+}
+.alumni{
+	width: 320px;
+}
+.al_data{
+	padding: 10px;
+	white-space: nowrap;
+}
+.al_row:nth-child(odd){
+	background-color: #ffffff91;
+	color: #0f0f11;
+}
+.al_row:nth-child(even){
+	background-color: #ffffff71;
+	color: #252527;
 }

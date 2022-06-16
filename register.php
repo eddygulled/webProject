@@ -12,13 +12,16 @@ $pWord = $_POST['pWord'];
 $s_query = "INSERT INTO `user`(`id`,`fname`,`mname`,`lname`,`uname`,`email`,`bdate`,`pWord`,`uState`) VALUES(null,'".$fname."', '".$mname."', '".$lname."', '".$uname."','".$email."', '".$bdate."', '".$pWord."', 'student')";
 $con->query($s_query);
 
+$id_data = $con->query("select from user where uname = '".$uname."' and pWord='".$pWord."'")->fetch_assoc();
+$id = $id_data['id'];
+$_SESSION['id'] = $id;
 ?>
 
 <html>
     <body>
         <script>
             document.body.onload = ()=>{
-                window.location.href = "alumni.php?user=<?php echo $uname ?>";
+                window.location.href = "alumni.php";
             }
         </script>
     </body>
