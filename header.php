@@ -31,7 +31,7 @@
                         <li><a href="register.v2.php">Register</a></li>
                         <li><a href="staff.php">staff</a></li>
                         
-                        <?php if(empty($_SESSION['id'])){?>
+                        <?php if(!isset($_SESSION['id'])){?>
                         <li><a href="login.php">Login</a></li>
                         <?php }else{ ?>
                             <li><a href="alumni.php">Alumni</a></li>

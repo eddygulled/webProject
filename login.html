@@ -34,42 +34,33 @@
                 </nav>
             </div>
         </div>
-        
-        <header>
-            <div class="container">
-                <div class="text-container">
-                    <h1 class="h1-large">Contacts</h1>
-                </div>
-            </div>
-        </header>
 
-        <div id="block1" class="block1">
+         <!-- block5 -->
+         <div id="block5" class="block5 bg-gray">
             <div class="container">
-                <p class="p-large">As education forefronts of the country you can easly reach us anywhere you are, All our contacts are mentioned below</p>
+                <h2>Login</h2>
+                <p class="p-heading">Please provide all required Information to access alumni </p>
 
-                <div class="grid grid-3">
-                    <div>
-                        <i class="fas fa-envelope"></i>
-                        <h4>stmarys@info.ac.tz</h4>
+                <!-- block5 Form -->
+                <form id = "form"  method="post" action="auth.php">
+                  
+                    <div class="form-group">
+                        <input type="text" class="form-control-input" placeholder="User Name" id = "uname" name = "uname">
                     </div>
-                    <div>
-                        <i class="fas fa-phone-square"></i>
-                        <h4>+255 74404404</h4>
+                   
+                    <div class="form-group">
+                        <input type="password" class="form-control-input" placeholder="password" id = "pwrd" name = "pWord">
                     </div>
-                    <div>
-                        <i class="fas fa-phone-alt"></i>
-                        <h4>+255 22200145</h4>
+                   
+                    
+                    <div class="form-group">
+                        <input type="submit" id = "form_sub" class="form-control-submit-button" value="login">
                     </div>
-                </div> 
-            </div> 
-        </div> 
+                </form>
+                <!-- end of block5 form -->
 
-        <div id="block2" class="block2">
-            <div class="container">
-                <p class="p-large">Live Map directions from your location</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.3889106447114!2d39.20325801428416!3d-6.722308267594063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c5107df9a957b%3A0xc0d4431ffe52b8bb!2sSt.%20Mary&#39;s%20Junior%20International%20School%20-%20Mbezi!5e0!3m2!1sen!2stz!4v1655605212528!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+            </div> <!-- end of container -->
+        </div> <!-- end of block5 -->
 
 
        
@@ -101,7 +92,7 @@
         <a id="myBtn" href="#" data-scroll>
             <img src="images/up-arrow.png" alt="alternative">
         </a>
-        <!-- end of back to top button -->
+        
             
         <!-- Scripts -->
         <script src="js/smooth-scroll.polyfills.min.js"></script> <!-- Smooth Scroll -->

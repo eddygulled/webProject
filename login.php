@@ -1,4 +1,9 @@
-<?php include 'header.php' ?>
+<?php include 'header.php' ;if($_GET['err'] == 1){?>
+<script>
+    alert("Invalid Username or password")
+</script>
+<?php } ?>
+
 
          <!-- block5 -->
          <div id="block5" class="block5 bg-gray">

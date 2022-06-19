@@ -1,7 +1,9 @@
 <?php 
 include 'db.php';
+session_start();
+
 $id = $_SESSION['id'];
-if( empty( $_SESSION['id'] )){
+if(!isset($_SESSION['id'])){
     echo "<script>window.location.href = 'login.php' </script>";
 }
 $user_data = $con->query("SELECT * FROM user WHERE id='".$id."'");
@@ -45,6 +47,10 @@ $user = $user_data->fetch_assoc();
                     <tr>
                         <td class='profile'>Birthdate</td>
                         <td class='profile'><?php echo $user['bdate'] ?></td>
+                    </tr>
+                    <tr>
+                        <td class='profile'>My CV</td>
+                        <td class='profile'><a href="<?php echo $user['cv'] ?>"> <i class="fa fa-download"></i> Download</a></td>
                     </tr>
                 </table>
 
@@ -114,7 +120,7 @@ $user = $user_data->fetch_assoc();
                         <span class="text-danger" id="err"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Full Name" id = "name" name = "name">
+                        <input required type="text" class="form-control-input" placeholder="Full Name" id = "name" name = "name">
                     </div>
                     <div class="form-group">  
                         <select name = "year_of_enrolment">
@@ -157,13 +163,13 @@ $user = $user_data->fetch_assoc();
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Headmaster During Enrolment" id = "het" name = "headmaster_at_enrolment">
+                        <input required type="text" class="form-control-input" placeholder="Headmaster During Enrolment" id = "het" name = "headmaster_at_enrolment">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Headmaster During Graduation" id = "hdg" name = "headmaster_at_graduation">
+                        <input required type="text" class="form-control-input" placeholder="Headmaster During Graduation" id = "hdg" name = "headmaster_at_graduation">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Famous Teacher at Graduation" id = "ftdg" name = "famous_teacher_graduation">
+                        <input required type="text" class="form-control-input" placeholder="Famous Teacher at Graduation" id = "ftdg" name = "famous_teacher_graduation">
                     </div>
 
                     <div class="form-group">
@@ -178,17 +184,17 @@ $user = $user_data->fetch_assoc();
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Current Occupation" id = "current_occupation" name = "occupation">
+                        <input required type="text" class="form-control-input" placeholder="Current Occupation" id = "current_occupation" name = "occupation">
                     </div>
                     
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Current Address" id = "address" name = "curr_address">
+                        <input required type="text" class="form-control-input" placeholder="Current Address" id = "address" name = "curr_address">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Email" id = "email" name = "email">
+                        <input required type="text" class="form-control-input" placeholder="Email" id = "email" name = "email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Mobile Number" id = "mobile_number" name = "mobile_number">
+                        <input required type="text" class="form-control-input" placeholder="Mobile Number" id = "mobile_number" name = "mobile_number">
                     </div>
                     
                     <div class="form-group">

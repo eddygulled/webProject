@@ -23,11 +23,13 @@
 
                 <nav>
                     <ul >
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.hmtl">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="staff.html">staff</a></li>
-                        <li><a href="login.php">login</a></li>
+                        <li><a href="staff.html">Staff</a></li>
+                        <li><a href="alumni.html">Alumni</a></li>
+                        <li><a href="contacts.html">contacts</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
                     </ul>
                 </nav>
             </div>
@@ -69,37 +71,40 @@
                         <span class="text-danger" id="err"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="First Name" id = "fname" name = "fname">
+                        <input required type="text" class="form-control-input" placeholder="First Name" id = "fname" name = "fname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Middle Name" id = "mname" name = "mname">
+                        <input required type="text" class="form-control-input" placeholder="Middle Name" id = "mname" name = "mname">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="Last Name" id = "lname" name = "lname">
+                        <input required type="text" class="form-control-input" placeholder="Last Name" id = "lname" name = "lname">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control-input" placeholder="Email" id = "email"name = "email" >
+                        <input required type="email" class="form-control-input" placeholder="Email" id = "email"name = "email" >
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control-input" placeholder="User Name" id = "uname" name = "uname">
+                        <input required type="text" class="form-control-input" placeholder="User Name" id = "uname" name = "uname">
                     </div>
                     <div class="form-group">
-                        <input type="date" class="form-control-input" placeholder="Birthday" id = "bdate" name = "bdate">
+                        <input required type="date" class="form-control-input" placeholder="Birthday" id = "bdate" name = "bdate">
                     </div>
                     <div class="form-group">
-                        <input type="file" class="form-control-input" placeholder="CV" id = "cv" name = "cv">
+                        <input required type="file" class="form-control-input" placeholder="CV" id = "cv" name = "cv">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control-input" placeholder="password" id = "pwrd" name = "pWord">
+                        <input required type="text" class="form-control-input" placeholder="password" id = "pwrd" name = "pWord"><br>
+                        <span class="text-danger" id="err1"></span>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control-input" placeholder="Confirm Password" id = "cpwrd" >
+                        <input required type="text" class="form-control-input" placeholder="Confirm Password" id = "cpwrd" ><br>
+                        <span class="text-danger" id="err2"></span>
                     </div>
                     
                     <div class="form-group">
-                        <input type="submit" id = "form_sub" class="form-control-submit-button" value="Register">
+                        <input type="button" id = "form_sub" class="form-control-submit-button" value="Register">
                     </div>
                 </form>
+               
                 <!-- end of block5 form -->
 
             </div> <!-- end of container -->
@@ -115,10 +120,13 @@
                 </div>
                 <div>
                     <ul class="li-space-lg">
+                        <li><a href="index.hmtl">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="staff.html">Staff</a></li>
-                        <li><a href="alumini.html">Alumini</a></li>
+                        <li><a href="alumni.html">Alumni</a></li>
+                        <li><a href="contacts.html">contacts</a></li>
                         <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
                     </ul>
                 </div>
                 <div>
@@ -135,7 +143,30 @@
         <!-- end of back to top button -->
             
         <!-- Scripts -->
-        <script src="js/smooth-scroll.polyfills.min.js"></script> <!-- Smooth Scroll -->
+        <script src="js/smooth-scroll.polyfills.min.js"></script>
         <script src="js/scripts.js"></script> <!-- Custom scripts -->
+        <script>
+            var pwrd = document.getElementById("pwrd");
+            var cpwrd = document.getElementById("cpwrd");
+            var err = document.getElementById("err1");
+            var err1 = document.getElementById("err2");
+            var bt = document.getElementById("form_sub");
+            bt.onclick = function(){
+                if(document.getElementById("email").value.indexOf("@") != -1){alert("good email")}
+                // validate password
+                if(pwrd.value == cpwrd.value){
+                   
+                    //check markup
+                    var regEx =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+                    if (regEx.test(pwrd.value)) {
+                        bt.type = "submit";
+                    } else {
+                        err.innerHTML = "Password Must contain Capital letter and special character!";
+                    }
+                }else{
+                    err1.innerHTML = "Password mismatch!";
+                }
+            }
+        </script>
     </body>
 </html>
